@@ -14,5 +14,5 @@ Copyright (C) 2015  Blake Barker, Jeffrey Humpherys, Joshua Lytle, Kevin Zumbrun
     along with this program.  If not, see <http://www.gnu.org/licenses/>
 Suggested Research Citation: 
 
-B. Barker, , J. Humpherys, J. Lytle, and K. Zumbrun, STABLAB: A MATLAB-Based Numerical
+B. Barker, J. Humpherys, J. Lytle, and K. Zumbrun, STABLAB: A MATLAB-Based Numerical
 Library for Evans Function Computation (June 2015). Available in the github repository, nonlinear-waves/stablab. 
