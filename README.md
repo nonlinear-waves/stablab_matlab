@@ -15,4 +15,13 @@ Copyright (C) 2015  Blake Barker, Jeffrey Humpherys, Joshua Lytle, Kevin Zumbrun
 Suggested Research Citation: 
 
 B. Barker, J. Humpherys, J. Lytle, and K. Zumbrun, STABLAB: A MATLAB-Based Numerical
-Library for Evans Function Computation (June 2015). Available in the github repository, nonlinear-waves/stablab. 
+Library for Evans Function Computation (April 2015). Available in the github repository, nonlinear-waves/stablab. 
+
+Contributors of Systems:
+
+(1) Stephane Lafortune - surfactant
+
+Anna Ghazaryan,  Stephane Lafortune, and Vahagn Manukian. 
+"Spectral Analysis of Fronts in a Marangoni-Driven Thin 
+Liquid Film Flow Down a Slope." SIAM Journal on Applied 
+Mathematics 80, no. 1 (2020): 95-118.

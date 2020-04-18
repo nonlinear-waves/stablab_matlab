@@ -8,6 +8,8 @@ function out = continuation_guess(x,s_old,s_new)
 % s_old, continuation_guess yields as output v=a*y+b done componenet wise
 % to allow phase conditions to be specified and so v matches its end
 % states.
+%
+% The end state and phase condition can not match.
 
 y=deval(x,s_old.sol);
 out=zeros(length(y),1);
@@ -28,7 +30,7 @@ for j=1:length(s_old.rarray)
     for k=1:length(s_new.order)
         if j==s_new.order(k)
             specify_phase=1;
-            phase_index=k;
+            phase_index=j;
         end
     end
     
@@ -37,11 +39,14 @@ for j=1:length(s_old.rarray)
     vplus=s_new.UR(j);
     yminus=s_old.UL(j);
     yplus=s_old.UR(j);
+    
+    % Note that it is important that the end state and phase condition not
+    % be the same.
     if specify_phase==1
         % case where the phase condition is specified
         vnot=s_new.phase(phase_index);
         ynot=s_old.phase(phase_index);
-        vec=inv([yplus 1 0 0; ynot 1 0 0; 0 0 yminus 1; 0 0 ynot 1])*[vplus; vnot; vminus; vnot];
+        vec = [yplus 1 0 0; ynot 1 0 0; 0 0 yminus 1; 0 0 ynot 1]\[vplus; vnot; vminus; vnot];
         a(j,1)=vec(1);
         b(j,1)=vec(2);
         a(j,2)=vec(3);
@@ -54,7 +59,7 @@ for j=1:length(s_old.rarray)
             a(j,2)=1;
             b(j,2)=0;
         else
-            vec=inv([yplus 1; yminus 1])*[vplus; vminus];
+            vec=[yplus 1; yminus 1]\[vplus; vminus];
             a(j,1)=vec(1);
             b(j,1)=vec(2);
             a(j,2)=vec(1);

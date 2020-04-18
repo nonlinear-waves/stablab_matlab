@@ -7,11 +7,11 @@ function out=soln(x,s)
 % stucture described in the STABLAB documenation
 
 if x < 0
-    x = s.side*s.I/s.L*x;
+    x = s.side*s.I*(x/s.L);
     temp = deval(s.sol,x);
     out = temp(s.larray,:);
 else
-   x = s.side*s.I/s.R*x;
+   x = s.side*s.I*(x/s.R);
    temp = deval(s.sol,x);
    out = temp(s.rarray,:);
 end
