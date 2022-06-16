@@ -123,6 +123,16 @@ muR= trace(OmegaR0'*e.RA(e.Ri(1),lambda,s,p)*OmegaR0);
 out = (det(alphaL)*gammal)*(det(alphaR)*gammar)*det([omegal omegar]);
 
 
+function out = lopatinski(yl,yr,lambda,s,p,m,e)
+
+% the jump condition could be evaluated once per parameter set resulting
+% in a little bit of speed up. However, this increases the risk of the user 
+% failing to update it, so we perform the evaluation here
+
+[f0L,ftildeL,A1tildeL] = e.jump(-1,s,p);
+[f0R,ftildeR,A1tildeR] = e.jump(1,s,p);
+out = det([A1tildeL*yl,lambda*(f0R-f0L)+1i*(ftildeR-ftildeL),A1tildeR*yr]);
+
 
 
 
