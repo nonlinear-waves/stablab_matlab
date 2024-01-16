@@ -1,1 +1,1 @@
-This is code for computer assited proof of stability of waves in the KdV-Burgers equation.
+This is code for computer assited proof of stability of waves in the KdV-Burgers equation. The authors of this work are, listed alphabetically by last name, Blake Barker, Jared Bronski, Vera Hur, and Zhao Yang. 
