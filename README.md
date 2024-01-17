@@ -26,5 +26,5 @@ Anna Ghazaryan,  Stephane Lafortune, and Vahagn Manukian.
 Liquid Film Flow Down a Slope." SIAM Journal on Applied 
 Mathematics 80, no. 1 (2020): 95-118.
 
-(2) Blake Barker, Jared Bronski, and Vera Hur, and Zhao Yang. - KdVB
+(2) Blake Barker, Jared Bronski, Vera Hur, and Zhao Yang. - KdVB
 "Asymptotic stability of sharp fronts: Analysis and Rigorous Numerics"
