@@ -25,3 +25,6 @@ Anna Ghazaryan,  Stephane Lafortune, and Vahagn Manukian.
 "Spectral Analysis of Fronts in a Marangoni-Driven Thin 
 Liquid Film Flow Down a Slope." SIAM Journal on Applied 
 Mathematics 80, no. 1 (2020): 95-118.
+
+(2) Blake Barker, Jared Bronski, and Vera Hur, and Zhao Yang. - KdVB
+"Asymptotic stability of sharp fronts: Analysis and Rigorous Numerics"
