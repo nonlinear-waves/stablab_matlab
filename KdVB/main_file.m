@@ -245,6 +245,11 @@ theta_R_alpha_wide = theta_R_alpha;
 theta_R_alpha_wide(1) = theta_R_alpha_wide(1)+iv(-r_newton,r_newton); 
 rm_wide_eval = eval_rm(theta_R_alpha_wide,r_R_alpha,dr);
 
+% Throws an error if it fails to verify that there is not a conjugate point
+% in the right manifold piece
+verify_no_conj_points_rm(theta_R_alpha_wide,dr,x_R,alpha_left,alpha_right,101);
+
+
 % update the Jacobian
 for j = 1:4
     DF_mu(end-j+1,end-j,1) = -1;
@@ -544,6 +549,11 @@ end
 if success == 1
    disp('Congratulations! The proof succeeded.'); 
 end
+
+
+verify_left_condition(theta_0,mu_left,mu_right,dmm(1).dm.poly_phi,dmm(1).dm.poly_w, ...
+    dmm(1).dm.poly_u,dmm(1).dm.poly_z,r_newton,nu_left,nu_right)
+
 
 total_run_time = toc(t_start);
 
