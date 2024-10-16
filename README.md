@@ -12,12 +12,23 @@ Copyright (C) 2015  Blake Barker, Jeffrey Humpherys, Joshua Lytle, Kevin Zumbrun
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>
-Suggested Research Citation: 
+    
+Suggested Research Citation for the core code: 
 
 B. Barker, J. Humpherys, J. Lytle, and K. Zumbrun, STABLAB: A MATLAB-Based Numerical
 Library for Evans Function Computation (April 2015). Available in the github repository, nonlinear-waves/stablab. 
 
+When using code contributed by others, it is recommened you also cite the releveant contributors.
+
 Other contributors:
+
+(3) Olivia Chandrasekhar, C.K.R.T. Jones, Blake Barker, and Rodman Linn - streamwise_wildfire
+
+Preprint
+
+(2) Blake Barker, Jared Bronski, Vera Hur, and Zhao Yang. - KdVB
+
+"Asymptotic stability of sharp fronts: Analysis and Rigorous Numerics"
 
 (1) Stephane Lafortune - surfactant system
 
@@ -26,6 +37,4 @@ Anna Ghazaryan,  Stephane Lafortune, and Vahagn Manukian.
 Liquid Film Flow Down a Slope." SIAM Journal on Applied 
 Mathematics 80, no. 1 (2020): 95-118.
 
-(2) Blake Barker, Jared Bronski, Vera Hur, and Zhao Yang. - KdVB
 
-"Asymptotic stability of sharp fronts: Analysis and Rigorous Numerics"
