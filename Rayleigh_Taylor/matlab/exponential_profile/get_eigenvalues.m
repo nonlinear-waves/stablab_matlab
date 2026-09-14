@@ -14,7 +14,6 @@ if g1*g2 >= 0
     error('root is not bracketed');
 end
 
-% bisection method
 while abs((x2-x1)/x1) > 1e-12
     xmid = (x1+x2)/2;
     gmid = (4*k^2-a^2+xmid^2)*tan(xmid*h/2)+2*a*xmid;
@@ -27,7 +26,6 @@ end
 
 x = (x1+x2)/2;
 
-% eigenvalue 
 lambda = sqrt(4*k^2*a*gravitational_constant/(a^2+4*k^2+x^2));
 
 

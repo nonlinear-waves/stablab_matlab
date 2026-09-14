@@ -1,7 +1,5 @@
 clc; close all; clear all; beep off;
 
-% test that mu = 0 does not correspond to an eigenvalue
-
 % parameters
 p.rho_m = 0.1;
 p.rho_p = 1; % bigger than p.rho_m

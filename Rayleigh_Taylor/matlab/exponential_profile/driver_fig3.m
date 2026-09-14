@@ -1,6 +1,6 @@
 clc; close all; clear all; beep off;
 
-disp('Plot of the top 5 modes for k = 200');
+disp('Plot of the second largest eigenvalue as a function of k');
 
 % parameters
 p.rho_m = 0.1;
@@ -14,7 +14,7 @@ p.a = log(p.rho_p/p.rho_m)/p.h;
 profile_ratio = @(x)p.a;
 s.options = odeset('RelTol',1e-8,'AbsTol',1e-8);
 
-Atwood_number =  p.rho_p -p.rho_m/(p.rho_p + p.rho_m);
+Atwood_number =  (p.rho_p -p.rho_m)/(p.rho_p + p.rho_m);
 fprintf('\nAtwood number = %4.4g\n',Atwood_number);
 
 bound = sqrt(p.a*p.g);

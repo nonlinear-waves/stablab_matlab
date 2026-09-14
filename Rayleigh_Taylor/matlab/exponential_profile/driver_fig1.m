@@ -14,13 +14,12 @@ p.a = log(p.rho_p/p.rho_m)/p.h;
 profile_ratio = @(x)p.a;
 s.options = odeset('RelTol',1e-8,'AbsTol',1e-8);
 
-p.Atwood_number =  p.rho_p -p.rho_m/(p.rho_p + p.rho_m);
+p.Atwood_number =  (p.rho_p -p.rho_m)/(p.rho_p + p.rho_m);
 fprintf('\nAtwood number = %4.4g\n',p.Atwood_number);
 
 bound = sqrt(p.a*p.g);
 
 % compute evans function
-
 
 num_k_indices = 200;
 num_eig_indices = 1;
@@ -36,12 +35,13 @@ for j = 1:size(M,1)
     end
 end
 
+% plot results
 figure;
 hold on;
 for j = 1:size(M,2)
-    plot(k_vals,M(:,j),'.k','MarkerSize',8);
+    plot(k_vals,M(:,j),'.k','MarkerSize',6);
 end
-plot([0,num_k_indices],[bound,bound],'--b','LineWidth',2);
+plot([0,num_k_indices],[bound,bound],'--b','LineWidth',1);
 
 mx = max(max(M));
 axis([-1,num_k_indices,-0.1*mx,1.1*mx]);
